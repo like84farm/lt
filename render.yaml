@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: gpt-chat-web
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ANTHROPIC_BASE_URL
+        value: https://llmhub.ltd
+      - key: OPENAI_MODEL
+        value: gpt-5.5
+      - key: ANTHROPIC_AUTH_TOKEN
+        sync: false
